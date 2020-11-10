@@ -1,3 +1,128 @@
 *{
     font-family: 'Montserrat', sans-serif;
 }
+
+/* Sidebar */
+/* Logo and Social */
+.sidebar{
+    display: flex;
+    justify-content: space-between;
+    padding: 49px 52px 0;
+}
+a>.logo{
+    width: 97px;
+    height: 30px;
+}
+.social a:hover svg{
+    width: 38px;
+    height: 38px;
+    opacity: 1;
+}
+.social> a > svg{
+    width: 30px;
+    height: 30px;
+    opacity: 0.8;
+    transition: .2s ease;
+}
+.social_item> a{
+    align-items: center;
+}
+
+a.facebook {
+    padding-left: 30px;
+}
+
+/* first section */
+.container{
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Navigation */
+.nav{
+    position: absolute;
+    top: -47px;
+}
+.nav ul{
+    display: flex;
+    padding: 0;
+}
+.nav ul li{
+    list-style-type: none;
+    margin-right: 54px;
+    transition: .2s ease;
+}
+.nav ul li:hover{
+    transform: translateY(-5px);
+    border-bottom: 1px solid #2B3541;
+    border-width: 100%;
+}
+.nav ul li a{
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 150%;
+    color: #2B3541;
+}
+
+h1{
+    width: 676px;
+    padding-top: 151px;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 125%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #2B3541;
+}
+.wrap{
+    padding-top: 80px;
+    display: flex;
+    position: relative;
+}
+.inner {
+    position: absolute;
+    right: -160px;
+    top: 50px;
+}
+.info_text{
+    font-size: 40px;
+    line-height: 125%;
+    color: #2B3541;
+}
+.info_text span {
+    padding-right: 16px;
+}
+.info{
+    padding-left: 90px;
+    width: 300px;
+    font-size: 18px;
+    line-height: 150%;
+}
+.btn{
+    width: 252px;
+    height: 64px;
+    background: #FBF138;
+    color: #2B3541;
+    outline: none;
+    margin-left: 90px;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .2s ease;
+    border-style: none;
+    margin-top: 40px;
+    position: relative;
+}
+.btn:hover{
+    background: #2B3541;
+    color: #FBF138;
+}
+.arrow {
+    position: absolute;
+    left: 87px;
+    bottom: -148px;
+}
