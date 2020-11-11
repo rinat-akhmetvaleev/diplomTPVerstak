@@ -23,6 +23,7 @@ a>.logo{
     height: 30px;
     opacity: 0.8;
     transition: .2s ease;
+    transform: translate(50% 50%);
 }
 .social_item> a{
     align-items: center;
@@ -31,6 +32,10 @@ a>.logo{
 a.facebook {
     padding-left: 30px;
 }
+/* Sidebar */
+/* Logo and Social */
+
+
 
 /* first section */
 .container{
@@ -64,8 +69,10 @@ a.facebook {
     line-height: 150%;
     color: #2B3541;
 }
+/* Navigation */
 
-h1{
+
+.title{
     width: 676px;
     padding-top: 151px;
     font-weight: bold;
@@ -125,4 +132,87 @@ h1{
     position: absolute;
     left: 87px;
     bottom: -148px;
+}
+.wrapper {
+    padding-top: 300px;
+}
+/* first section */
+
+
+
+/* Meetup */
+.short_title{
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 125%;
+    color: #2B3541;
+}
+.card{
+    display: flex;
+    justify-content: space-between;
+}
+.cards{
+    position: relative;
+}
+.cards > .data,
+.cards > .title_item,
+.cards > .cat 
+{
+    position: absolute;
+    box-sizing: border-box;
+}
+.cards > .data{
+    top: 30px;
+    left: 30px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 150%;
+    color: #2B3541;
+    opacity: 0.6;
+}
+.cards > .title_item{
+    top: 77px;
+    left: 30px;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 125%;
+    color: #2B3541;
+}
+.cards > .cat{
+    bottom: 0;
+    right: 0;
+    background-color: #FBF138;
+    font-size: 18px;
+    line-height: 150%;
+    color: #2B3541;
+    text-align: center;
+    padding: 10px 20px;
+}
+/* Meetup */
+
+
+/* shedule */
+.shedule{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.form{
+    margin-top: 160px;
+}
+.shedule_date{
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 125%;
+    color: #2B3541;
+}
+.form_group{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin-bottom: 80px;
+}
+.module{
+    border: 1px solid #2b354180;
+    /* opacity: 0.5; */
 }
