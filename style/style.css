@@ -1,5 +1,9 @@
-*{
+body{
     font-family: 'Montserrat', sans-serif;
+    /* overflow-y: hidden; */
+}
+.lock{
+    overflow-y: hidden;
 }
 
 /* Sidebar */
@@ -349,6 +353,10 @@ a.facebook {
     bottom: 100px;
 }
 
+
+
+/* Mailing */
+
 .mailing {
     display: flex;
     justify-content: center;
@@ -357,6 +365,13 @@ a.facebook {
     margin: 0 auto;
     padding-top: 204px;
     padding-left: 34px;
+    position: relative;
+}
+.mailing svg{
+    position: absolute;
+    top: 200px;
+    left: 5px;
+    z-index: 1;
 }
 .mailing_title {
     font-weight: 700;
@@ -364,6 +379,7 @@ a.facebook {
     line-height: 49px;
     color: #2B3541;
     padding-left: 8px;
+    z-index: 2;
 }
 .mail{
     display: flex;
@@ -572,7 +588,10 @@ a.facebook {
 
 
 /* PopUp */
-
+.dark_bg{
+    display: none;
+    /* overflow-y: hidden; */
+}
 .dark_bg:before {
 	content: '';
 	background: #000;
@@ -602,8 +621,8 @@ a.facebook {
 }
 .close {
 	position: absolute;
-	top: 10px;
-	right: 10px;
+	top: 30px;
+	right: 30px;
 }
 
 .popup_title{
