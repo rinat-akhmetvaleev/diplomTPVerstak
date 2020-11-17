@@ -569,3 +569,85 @@ a.facebook {
     color: #000;
     cursor: pointer;
 }
+
+
+/* PopUp */
+
+.dark_bg:before {
+	content: '';
+	background: #000;
+	position: fixed; 
+	left: 0;
+	top: 0;
+	width: 100%; 
+	height: 100%;
+	opacity: 0.7;
+	z-index: 9999;
+}
+
+.popup {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+	position: fixed;
+	top: 20%;
+	left: 50%;
+	padding: 60px 20px 80px;
+	width: 600px;
+	margin-left: -300px;	
+	background: #fff;
+	z-index: 99999;
+	opacity: 1;	
+}
+.close {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+.popup_title{
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 125%;
+    color: #2B3541;
+    margin-bottom: 18px;
+}
+.popup_text{
+    font-size: 18px;
+    line-height: 150%;
+    color: #2B3541;
+    margin-bottom: 40px;
+}
+.popup_input{
+    width: 500px;
+    height: 64px;
+    border: none;
+    outline: none;
+}
+
+
+.popup_btn {
+    width: 500px;
+    height: 64px;
+    background: #FBF138;
+    color: #2B3541;
+    outline: none;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .2s ease;
+    border-style: none;
+    margin-top: 17px;
+    position: relative;
+}
+.popup_btn:hover{
+    background: #2B3541;
+    color: #FBF138;
+}
+
+
+/* PopUp */

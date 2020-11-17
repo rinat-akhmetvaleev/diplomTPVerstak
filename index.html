@@ -47,7 +47,7 @@
                 <h1 class="title">Онлайн тренировки любой сложности</h1>
                 <p class="info_text"><span>&gt;15</span>тренировок</p>
                 <p class="info">в области спортивной физиологии и нутрициологии</p>
-                <button class="btn">Узнать подробнее</button>
+                <button class="btn btn_popup">Узнать подробнее</button>
                 <a class="arrow" href="#">
                     <svg width="52" height="55" viewBox="0 0 52 55" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0)">
@@ -87,21 +87,21 @@
                     <div class="data">29.06 - 4.07</div>
                     <h3 class="title_item">Марафон выносливости</h3>
                     <div class="cat">марафон</div>
-                    <button class="btn_card">Учавствовать</button>
+                    <button class="btn_card btn_popup">Учавствовать</button>
                 </div>
                 <div class="cards">
                     <img src="img/meetup/trainer.png" alt="trainer">
                     <div class="data">9.07</div>
                     <h3 class="title_item">Как стать<br>тренером?</h3>
                     <div class="cat">вебинар</div>
-                    <button class="btn_card">Учавствовать</button>
+                    <button class="btn_card btn_popup">Учавствовать</button>
                 </div>
                 <div class="cards">
                     <img src="img/meetup/yoga.png" alt="yoga">
                     <div class="data">15.07</div>
                     <h3 class="title_item">Йога, как стиль жизни</h3>
                     <div class="cat">вебинар</div>
-                    <button class="btn_card">Учавствовать</button>
+                    <button class="btn_card btn_popup">Учавствовать</button>
                 </div>
             </div>
         </div>
@@ -155,7 +155,7 @@
             <h2 class="mailing_title">Подпишитесь на&nbsp;рассылку</h2>
             <div class="mail">
                 <input class="email" type="email" placeholder="Ваш e-mail">
-                <button class="mailing_btn">ПОДПИСАТЬСЯ</button>
+                <button class="mailing_btn btn_popup">ПОДПИСАТЬСЯ</button>
             </div>
             <input class="custom_check" type="checkbox" id="mailing">
             <label class="mailing_text" for="mailing">Согласен с обработкой&nbsp;<u>персональных данных</u></label>
@@ -166,7 +166,7 @@
                 <div class="short_about">
                     <h2 class="about_title">О компании</h2>
                     <p class="about_text">Наша компания является одной из немногих, кто предлагает фитнес услуги онлайн! Оставайтесь<br>с нами и вы сами увидите, что мы проводим<br>не только онлайн-тренировки.</p>
-                    <button class="about_btn">Записаться</button>
+                    <button class="about_btn btn_popup">Записаться</button>
                 </div>
                 <div class="about_image">
                     <img src="img/about.png" alt="Image">
@@ -232,13 +232,46 @@
         </footer>
     </div>
 
-
+    <div class="dark_bg">
+        <div class="popup">
+            <a href="#" class="close">
+                <img src="img/icon/close.svg" alt="close">
+            </a>
+            <h2 class="popup_title">Заявка на участие<br>«Марафон выносливости»</h2>
+            <p class="popup_text">Заполните все поля, и мы пришлем<br>информацию в ближайшее время</p>
+            <input class="popup_input" type="email" placeholder="Ваш e-mail"></input>
+            <input class="popup_input" type="number" placeholder="Ваш номер телефона">
+            <button class="popup_btn">Отправить</button>
+        </div>
+    </div>
 
     
+    <script src="https://yandex.st/jquery/2.1.1/jquery.min.js"></script>
     <script>
-        $("#fade").modal({
-            fadeDuration: 100
+    $(document).ready(function($) {
+        $('.btn_popup').click(function() {
+            $('.dark_bg').fadeIn();
+            return false;
+        });	
+        
+        $('.close').click(function() {
+            $(this).parents('.dark_bg').fadeOut();
+            return false;
+        });		
+    
+        $(document).keydown(function(e) {
+            if (e.keyCode === 27) {
+                e.stopPropagation();
+                $('.dark_bg').fadeOut();
+            }
         });
+        
+        $('.dark_bg').click(function(e) {
+            if ($(e.target).closest('.popup').length == 0) {
+                $(this).fadeOut();					
+            }
+        });
+    });
     </script>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
