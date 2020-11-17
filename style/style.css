@@ -609,7 +609,7 @@ a.facebook {
     align-items: center;
     text-align: center;
     flex-direction: column;
-	position: fixed;
+    position: fixed;
 	top: 20%;
 	left: 50%;
 	padding: 60px 20px 80px;
@@ -618,6 +618,12 @@ a.facebook {
 	background: #fff;
 	z-index: 99999;
 	opacity: 1;	
+}
+.popup svg{
+    position: absolute;
+    top: 40px;
+    left: 130px;
+    z-index: 1;
 }
 .close {
 	position: absolute;
@@ -631,6 +637,7 @@ a.facebook {
     line-height: 125%;
     color: #2B3541;
     margin-bottom: 18px;
+    z-index: 2;
 }
 .popup_text{
     font-size: 18px;
