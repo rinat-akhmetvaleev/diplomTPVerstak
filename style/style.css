@@ -486,8 +486,6 @@ a.facebook {
 .module:hover h3{
     bottom: 100px;
 }
-
-
 @media(max-width: 360px){
     .form{
         margin-top: 80px;
@@ -501,6 +499,10 @@ a.facebook {
         font-size: 16px;
         line-height: 120%;
         opacity: .7;
+    }
+    .form_group{
+        width: 340px;
+        grid-template-columns: 1fr;
     }
 }
 /* Mailing */
