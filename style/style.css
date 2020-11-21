@@ -519,8 +519,8 @@ a.facebook {
 }
 .mailing svg{
     position: absolute;
-    top: 200px;
-    left: 5px;
+    top: 208px;
+    left: -18px;
     z-index: 1;
 }
 .mailing_title {
@@ -535,6 +535,7 @@ a.facebook {
     display: flex;
     min-width: 620px;
     padding-bottom: 10px;
+    position: relative;
 }
 .email{
     width: 372px;
@@ -573,6 +574,9 @@ a.facebook {
     line-height: 150%;
     color: #0e1115;
     opacity: 0.5;
+    position: absolute;
+    bottom: -22px;
+    left: -2px;
 }
 
 .mailing_text u:hover{
@@ -580,6 +584,8 @@ a.facebook {
     color: #000;
     opacity: 1;
 }
+
+
 
 .custom_check + label {
     display: inline-flex;
@@ -611,9 +617,44 @@ a.facebook {
     background-color:rgb(0, 0, 0);
     border-color:rgb(0, 0, 0);
 }
+
+
+
 .mail{
     display: flex;
     padding-bottom: 10px;
+}
+
+@media(max-width: 360px){
+    .mailing{
+        padding-left: 0;
+        padding-top: 80px;
+        width: auto;
+    }
+    .mailing svg{
+        top: 64px;
+        left: 20px;
+    }
+    .mailing_title{
+        font-size: 26px;
+        line-height: 32px;
+        text-align: center;
+    }
+    .mail{
+        flex-direction: column;
+    }
+    .mailing_btn{
+        width: 338px;
+        margin-left: 0;
+        padding: 0;
+    }
+    .email{
+        width: 340px;
+    }
+    .mailing_text{
+        display: flex;
+        order: -1;
+    }
 }
 
 
@@ -623,15 +664,13 @@ a.facebook {
 /* About */
 .wrapp{
     padding-top: 244px;
+    padding-bottom: 170px;
 }
-.short_about {
-    margin-left: 15px;
-}
-.about {
+/* .about {
     display: flex;
     width: 1156px;
     padding-left: 3px;
-}
+} */
 .about_title {
     font-weight: 700;
     font-size: 40px;
@@ -641,6 +680,7 @@ a.facebook {
     margin-bottom: 21px;
 }
 .about_text{
+    max-width: 483px;
     font-size: 18px;
     line-height: 150%;
     color: #2B3541;
@@ -665,14 +705,14 @@ a.facebook {
     background: #2B3541;
     color: #FBF138;
 }
-.advantages {
+/* .advantages {
     display: grid;
     grid-template-columns: repeat(4,minmax(297px, 1fr));
     grid-gap: 15px;
     margin-top: 59px;
     margin-bottom: 170px;
     margin-left: 17px;
-}
+} */
 .advantages_title{
     font-weight: 700;
     font-size: 18px;
@@ -686,6 +726,90 @@ a.facebook {
     opacity: 0.6;
 }
 
+
+
+.about{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(297px, 1fr));
+}
+.grid_1{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.grid_2{
+    grid-column-start: 3;
+    grid-column-end: 5;
+    padding-bottom: 80px;
+}
+.grid_3{
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+
+@media(max-width: 360px){
+    .wrapp{
+        padding-top: 120px;
+    }
+    /* .about{
+        padding-left: 0;
+        width: auto;
+        flex-direction: column;
+    } */
+    .short_about{
+        margin-left: 0;
+    }
+    .about_title{
+        font-size: 26px;
+        line-height: 32px;
+        margin-bottom: 16px;
+    }
+    .about_text{
+        font-size: 16px;
+    }
+    .about_btn{
+        width: 359px;
+        margin-top: 0;
+    }
+    .about_image img{
+        width: 360px;
+        height: 207px;
+        padding-top: 15px;
+    }
+    /* .advantages{
+        display: flex;
+        flex-direction: column;
+    } */
+    .about{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, minmax(300px, 1fr));
+    }
+    .grid_1{
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+    .grid_2{
+        grid-column: 1 / 3;
+        padding-bottom: 0;
+        grid-row: 6 / 7;
+    }
+    .grid_3{
+        grid-column: 1 / 3;
+        grid-row: 2 / 3;
+    }
+    .grid_4{
+        grid-column: 1 / 3;
+        grid-row: 3 / 4;
+    }
+    .grid_5{
+        grid-column: 1 / 3;
+        grid-row: 4 / 5;
+    }
+    .grid_6{
+        grid-column: 1 / 3;
+        grid-row: 5 / 6;
+    }
+}
 
 /* Footer */
 .footer_top {
